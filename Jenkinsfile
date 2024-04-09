@@ -1,12 +1,12 @@
 pipeline {
     agent any 
     stages {
-        stage('Static Analysis') {
+        stage('Checkout') {
             steps {
                 echo 'Run the static analysis to the code' 
             }
         }
-        stage('Compile') {
+        stage('Build') {
             steps {
                 echo 'Compile the source code' 
             }
@@ -16,12 +16,12 @@ pipeline {
                 echo 'Run the security check against the application' 
             }
         }
-        stage('Run Unit Tests') {
+        stage('Caculate version') {
             steps {
                 echo 'Run unit tests from the source code' 
             }
         }
-        stage('Run Integration Tests') {
+        stage('build') {
             steps {
                 echo 'Run only crucial integration tests from the source code' 
             }
